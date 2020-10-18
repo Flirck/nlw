@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Localize um posto | Stop-Covid</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="icon" href="/images/logo.png" />
+
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/page-units.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page-units">
+      <aside class="animate-right">
+        <header>
+          <img src="/images/covid.png" alt="StopCovid" class="zoom" />
+
+          <h2>Escolha um posto de vacinação no mapa</h2>
+
+          <p>Lembre-se de levar mascára e sempre higienizar as mãos :)</p>
+        </header>
+
+        <footer>
+          <strong>São Paulo</strong>
+          <p>Capital</p>
+
+        </footer>
+      </aside>
+
+      <div id="mapid" class="animate-appear"></div>
+
+      <div class="units">
+        
+        {{#each units}}
+
+        <span hidden 
+          data-id="{{this.id}}"
+          data-name="{{this.name}}"
+          data-lat="{{this.lat}}"
+          data-lng="{{this.lng}}"
+        ></span>
+
+        {{/each}}
+
+      </div>
+
+      <a
+        href="create-unity"
+        class="create-unity"
+        title="Cadastre um orfanato"
+      >
+        <img src="/images/plus.svg" alt="Create unity" />
+      </a>
+    </div>
+
+    <!--Make Pop-up-->
+
+    <div id="pop-up-info" class="pop-up-container"> 
+      <div class="pop-up">
+        <button class="quit">x</button>
+        <h3 class="subtitle">Agradecimentos e informações #MilhaExtra</h3>
+        <br>
+        <p> Olá me chamo Felipe e participei do Workshop NLW 3° edição da Rocketseat, este projeto é baseado na aplicação "Happy" onde inseri uma nova "roupagem" ou visão para elucidar a chegada das vacinas contra o corona vírus e como método de aprendizado, entrego totais créditos a Rocketseat por me proporcionar uma semana incrível de desafios. Sou iniciante porém com muito vigor para aprender, espero evoluir muito mais de hoje em diante, devagar mas em movimento sempre!</p>
+      </div>   
+    </div>
+
+
+
+    <script src="/scripts/page-units.js"></script>
+
+
+
+
+  </body>
+</html>
