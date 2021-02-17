@@ -1,6 +1,7 @@
 # STOPCOVID
 
-Aplicativo desenvolvido na semana NLW#3 da Rocketseat, originalmente desenvolvido para visitas em orfanatos(Happy) foi alterado para localização de postos de vacinação, elucidando a chegada das vacinas contra o vírus COVID-19 com objetivo de estudar os tópicos aprendidos no Workshop
+
+Application developed in the week NLW # 3 of Rocketseat, developed for visits in orphanages (Happy) was changed to location of vaccination sites, elucidating the arrival of vaccines against the virus COVID-19 in order to study the first lessons learned in the Workshop.
 
 
 Start
